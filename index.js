@@ -66,62 +66,123 @@ console.log(city(city2));
 
 // !ESERCIZIO 5
 
-const numeriArray = [1,2,3,4,5,6,7,8,9,10]
-
+const numeriArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const totale = function (array) {
-    let somma = 0
-    for (let i = 0; i < array.length; i++) {
-        somma += array[i]
-    }
-    return somma
-}
+  let somma = 0;
+  for (let i = 0; i < array.length; i++) {
+    somma += array[i];
+  }
+  return somma;
+};
 
 console.log(totale(numeriArray));
 
-
 // !ESERCIZIO 6
 
-const array1 = [1,2,3,4]
-const array2 = [2-4-5-6]
+const array1 = [1, 2, 3, 4];
+const array2 = [2 - 4 - 5 - 6];
+const array3 = [2, 3, 4, 5];
 
-const controllaNumeri = function(array) {
-   if (array.includes(1) || array.includes(3)) {
-    return false
-   } else {
-    return true
-   }
-}
+const controllaNumeri = function (array) {
+  if (array.includes(1) || array.includes(3)) {
+    return false;
+  } else {
+    return true;
+  }
+};
 
-console.log(controllaNumeri(array2));
-
+console.log(controllaNumeri(array3));
 
 // !ESERCIZIO 7
 
-
-let angolo1 = 90
-let angolo2 = 180
-let angolo3 = 120
-let angolo4 = 60
-
+let angolo1 = 90;
+let angolo2 = 180;
+let angolo3 = 120;
+let angolo4 = 60;
 
 const gradiAngolo = function (gradi) {
-    if (gradi < 90) {
-        return "Angolo acuto"
-    } if (gradi > 90 && gradi < 180 ) {
-        return "Angolo ottuso"
-    } if (gradi === 90) {
-        return "Angolo retto"
-    } else (gradi === 180); {
-        return "Angolo piatto"
-    }
-}
+  if (gradi < 90) {
+    return "Angolo acuto";
+  }
+  if (gradi > 90 && gradi < 180) {
+    return "Angolo ottuso";
+  }
+  if (gradi === 90) {
+    return "Angolo retto";
+  } else gradi === 180;
+  {
+    return "Angolo piatto";
+  }
+};
 
 console.log(gradiAngolo(angolo4));
 
-
-
 // !ESERCIZI EXTRA
-// !ESERCIZIO 1
+// !ESERCIZIO 3
+
+const parolaDaCercare = "sopra";
+const anagrammi = [
+  "parso",
+  "prosa",
+  "aspro",
+  "sparo",
+  "ciao",
+  "spora",
+  "sotto",
+  "alto",
+];
+
+const sonoAnagrammi = function(parola, anagramma) {
+  // Confronto se due parole sono anagrammi
+  const primaParola = parola.split("").sort().join("");
+  const secondaParola = anagramma.split("").sort().join("");
+  return primaParola === secondaParola;
+}
+
+ const trovaAnagrammi = function(parola, listaAnagrammi) {
+  // Gli anagrammi corretti vengono inseriti nella lista
+  return listaAnagrammi.filter((anagramma) => sonoAnagrammi(parola, anagramma));
+}
+
+const risultato = trovaAnagrammi(parolaDaCercare, anagrammi);
+console.log(risultato);
 
 
+
+// !ESERCIZIO 4
+
+
+let esempio1 = "otto"
+let esempio2 = "casa"
+let esempio3 = "radar"
+
+const parolaPalindroma = function(stringa) {
+    // converto la stringa in minuscolo per evitare problemi di formattazione
+    const stringaFormattata = stringa.toLowerCase();
+  
+    // Confronto la stringa originale con quella invertita
+    const stringaInvertita = stringaFormattata.split('').reverse().join('');
+    return stringaFormattata === stringaInvertita;
+  }
+  
+  // Esempio di utilizzo
+  
+  console.log(parolaPalindroma(esempio3)); 
+
+
+//   !ESERCIZIO 5
+
+let primoNumero = 110
+let secondoNumero = 281
+
+const invertiNumero = function (inverti) {
+    const stringaNumero = inverti.toString();
+
+    // Inverto l'ordine delle cifre e le ricompongo in un numero
+    const numeroInvertito = parseInt(stringaNumero.split('').reverse().join(''));
+    return numeroInvertito
+}
+
+console.log(invertiNumero(secondoNumero));
+  
