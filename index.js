@@ -119,6 +119,39 @@ const gradiAngolo = function (gradi) {
 console.log(gradiAngolo(angolo4));
 
 // !ESERCIZI EXTRA
+
+
+
+// !ESERCIZIO 1
+
+
+let parolaCarattere = "sessantasette"
+
+const contaCaratteri = function(conteggio) {
+  
+}
+
+
+// !ESERCIZIO 2
+
+let anagramma1 = "sopra"
+let anagramma2 = "spora"
+let anagramma3 = "sotto"
+
+const cercaAnagrammi = function (primoAnagramma, secondoAnagramma) {
+      const primaParola = primoAnagramma.toLowerCase().split("").sort().join("")
+      const secondaParola = secondoAnagramma.toLowerCase().split("").sort().join("")
+      if (primaParola === secondaParola) {
+        return true + ": queste due parole sono anagrammi"
+      } else {
+        return false + ": queste due parole non sono anagrammi"
+      }
+}
+
+console.log(cercaAnagrammi(anagramma3, anagramma2));
+
+
+
 // !ESERCIZIO 3
 
 const parolaDaCercare = "sopra";
@@ -186,3 +219,16 @@ const invertiNumero = function (inverti) {
 
 console.log(invertiNumero(secondoNumero));
   
+
+
+// !ESERCIZIO 7
+
+let stringaReverse1 = "Contrario"
+let stringaReverse2 = "Pianeta"
+
+const reverse = function(contrario) {
+  const contrarioStringa = contrario.toLowerCase().split("").reverse().join('')
+  return contrarioStringa
+}
+
+console.log(reverse(stringaReverse2))
