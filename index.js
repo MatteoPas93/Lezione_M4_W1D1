@@ -120,37 +120,33 @@ console.log(gradiAngolo(angolo4));
 
 // !ESERCIZI EXTRA
 
-
-
 // !ESERCIZIO 1
 
+let parolaCarattere = "sessantasette";
 
-let parolaCarattere = "sessantasette"
-
-const contaCaratteri = function(conteggio) {
-  
-}
-
+const contaCaratteri = function (conteggio) {};
 
 // !ESERCIZIO 2
 
-let anagramma1 = "sopra"
-let anagramma2 = "spora"
-let anagramma3 = "sotto"
+let anagramma1 = "sopra";
+let anagramma2 = "spora";
+let anagramma3 = "sotto";
 
 const cercaAnagrammi = function (primoAnagramma, secondoAnagramma) {
-      const primaParola = primoAnagramma.toLowerCase().split("").sort().join("")
-      const secondaParola = secondoAnagramma.toLowerCase().split("").sort().join("")
-      if (primaParola === secondaParola) {
-        return true + ": queste due parole sono anagrammi"
-      } else {
-        return false + ": queste due parole non sono anagrammi"
-      }
-}
+  const primaParola = primoAnagramma.toLowerCase().split("").sort().join("");
+  const secondaParola = secondoAnagramma
+    .toLowerCase()
+    .split("")
+    .sort()
+    .join("");
+  if (primaParola === secondaParola) {
+    return true + ": queste due parole sono anagrammi";
+  } else {
+    return false + ": queste due parole non sono anagrammi";
+  }
+};
 
 console.log(cercaAnagrammi(anagramma3, anagramma2));
-
-
 
 // !ESERCIZIO 3
 
@@ -166,69 +162,63 @@ const anagrammi = [
   "alto",
 ];
 
-const sonoAnagrammi = function(parola, anagramma) {
+const sonoAnagrammi = function (parola, anagramma) {
   // Confronto se due parole sono anagrammi
   const primaParola = parola.split("").sort().join("");
   const secondaParola = anagramma.split("").sort().join("");
   return primaParola === secondaParola;
-}
+};
 
- const trovaAnagrammi = function(parola, listaAnagrammi) {
+const trovaAnagrammi = function (parola, listaAnagrammi) {
   // Gli anagrammi corretti vengono inseriti nella lista
   return listaAnagrammi.filter((anagramma) => sonoAnagrammi(parola, anagramma));
-}
+};
 
 const risultato = trovaAnagrammi(parolaDaCercare, anagrammi);
 console.log(risultato);
 
-
-
 // !ESERCIZIO 4
 
+let esempio1 = "otto";
+let esempio2 = "casa";
+let esempio3 = "radar";
 
-let esempio1 = "otto"
-let esempio2 = "casa"
-let esempio3 = "radar"
+const parolaPalindroma = function (stringa) {
+  // converto la stringa in minuscolo per evitare problemi di formattazione
+  const stringaFormattata = stringa.toLowerCase();
 
-const parolaPalindroma = function(stringa) {
-    // converto la stringa in minuscolo per evitare problemi di formattazione
-    const stringaFormattata = stringa.toLowerCase();
-  
-    // Confronto la stringa originale con quella invertita
-    const stringaInvertita = stringaFormattata.split('').reverse().join('');
-    return stringaFormattata === stringaInvertita;
-  }
-  
-  // Esempio di utilizzo
-  
-  console.log(parolaPalindroma(esempio3)); 
+  // Confronto la stringa originale con quella invertita
+  const stringaInvertita = stringaFormattata.split("").reverse().join("");
+  return stringaFormattata === stringaInvertita;
+};
 
+// Esempio di utilizzo
+
+console.log(parolaPalindroma(esempio3));
 
 //   !ESERCIZIO 5
 
-let primoNumero = 110
-let secondoNumero = 281
+let primoNumero = 110;
+let secondoNumero = 281;
 
 const invertiNumero = function (inverti) {
-    const stringaNumero = inverti.toString();
+  const stringaNumero = inverti.toString();
 
-    // Inverto l'ordine delle cifre e le ricompongo in un numero
-    const numeroInvertito = parseInt(stringaNumero.split('').reverse().join(''));
-    return numeroInvertito
-}
+  // Inverto l'ordine delle cifre e le ricompongo in un numero
+  const numeroInvertito = parseInt(stringaNumero.split("").reverse().join(""));
+  return numeroInvertito;
+};
 
 console.log(invertiNumero(secondoNumero));
-  
-
 
 // !ESERCIZIO 7
 
-let stringaReverse1 = "Contrario"
-let stringaReverse2 = "Pianeta"
+let stringaReverse1 = "Contrario";
+let stringaReverse2 = "Pianeta";
 
-const reverse = function(contrario) {
-  const contrarioStringa = contrario.toLowerCase().split("").reverse().join('')
-  return contrarioStringa
-}
+const reverse = function (contrario) {
+  const contrarioStringa = contrario.toLowerCase().split("").reverse().join("");
+  return contrarioStringa;
+};
 
-console.log(reverse(stringaReverse2))
+console.log(reverse(stringaReverse2));
