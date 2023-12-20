@@ -11,11 +11,9 @@ console.log(numeri(25, 25));
 
 // !ESERCIZIO 2
 
-// const rimuoviCarattere = function () {
 
-// }
-
-let stringaNormale = "Carattere";
+let stringaCompleta = "Rimuovi carattere";
+let stringaCompleta2 = "Carattere"
 let carattereDaRimuovere = 4;
 
 const rimuoviCarattere = function (stringa, posizione) {
@@ -25,7 +23,7 @@ const rimuoviCarattere = function (stringa, posizione) {
   return stringa.slice(0, posizione) + stringa.slice(posizione + 1);
 };
 
-let stringaModifica = rimuoviCarattere(stringaNormale, carattereDaRimuovere);
+let stringaModifica = rimuoviCarattere(stringaCompleta, carattereDaRimuovere);
 console.log(stringaModifica);
 
 // !ESERCIZIO 3
@@ -222,3 +220,32 @@ const reverse = function (contrario) {
 };
 
 console.log(reverse(stringaReverse2));
+
+
+// !ESERCIZIO 8
+
+
+const esempioArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const lunghezzaY = 4;
+
+const dividiInSottoArray = function (array, Y) {
+  // Verifica che Y sia maggiore di 0
+  if (Y <= 0) {
+      return "La lunghezza Y deve essere maggiore di 0";
+  }
+
+  const sottoArray = [];
+  let index = 0;
+
+  while (index < array.length) {
+      sottoArray.push(array.slice(index, index + Y));
+      index += Y;
+  }
+
+  return sottoArray;
+}
+
+
+const results = dividiInSottoArray(esempioArray, lunghezzaY);
+console.log(results);
+
