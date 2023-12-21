@@ -116,6 +116,24 @@ const gradiAngolo = function (gradi) {
 
 console.log(gradiAngolo(angolo4));
 
+
+// !ESERCIZIO 8
+
+let provaAcronimo = "Croce Rossa Italiana"
+
+const acronimi = function (acronimo) {
+  let frase = acronimo.split(" ")
+  for (let i = 0; i < frase.length; i++) {
+    frase[i] = frase[i].charAt(0)
+  }
+  return frase.join("")
+}
+
+console.log(acronimi(provaAcronimo));
+
+
+
+
 // !ESERCIZI EXTRA
 
 // !ESERCIZIO 1
