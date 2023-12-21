@@ -120,6 +120,7 @@ console.log(gradiAngolo(angolo4));
 // !ESERCIZIO 8
 
 let provaAcronimo = "Croce Rossa Italiana"
+let provaAcronimo2 = "Fabbrica Italiana Automobili Torino"
 
 const acronimi = function (acronimo) {
   let frase = acronimo.split(" ")
